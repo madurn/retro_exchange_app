@@ -15,6 +15,7 @@ import { GenesisProductDetailComponent } from './genesis-product-detail/genesis-
 import { SnesProductsComponent } from './snes-products/snes-products.component';
 import { SnesProductDetailComponent } from './snes-product-detail/snes-product-detail.component';
 import { CartComponent } from './cart/cart.component';
+import { SellComponent } from './sell/sell.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CartComponent } from './cart/cart.component';
     GenesisProductDetailComponent,
     SnesProductsComponent,
     SnesProductDetailComponent,
-    CartComponent
+    CartComponent,
+    SellComponent
   ],
   imports: [
     BrowserModule,

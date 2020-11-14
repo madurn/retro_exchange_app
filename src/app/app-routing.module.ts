@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SnesProductsComponent } from './snes-products/snes-products.component'
-import { SnesProductDetailComponent } from './snes-product-detail/snes-product-detail.component'
-import { GenesisProductsComponent } from './genesis-products/genesis-products.component'
-import { GenesisProductDetailComponent } from './genesis-product-detail/genesis-product-detail.component'
-import { GameProductDetailComponent } from './game-product-detail/game-product-detail.component'
-import { CartComponent } from './cart/cart.component'
+import { SnesProductsComponent } from './snes-products/snes-products.component';
+import { SnesProductDetailComponent } from './snes-product-detail/snes-product-detail.component';
+import { GenesisProductsComponent } from './genesis-products/genesis-products.component';
+import { GenesisProductDetailComponent } from './genesis-product-detail/genesis-product-detail.component';
+import { GameProductDetailComponent } from './game-product-detail/game-product-detail.component';
+import { CartComponent } from './cart/cart.component';
+import { SellComponent } from './sell/sell.component';
 
 
 
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'genesis-products', component: GenesisProductsComponent},
   {path: 'genesis-product-detail/:id', component: GenesisProductDetailComponent},
   {path: 'game-product-detail/:id', component: GameProductDetailComponent},
-  {path: 'cart', component: CartComponent}
+  {path: 'cart', component: CartComponent},
+  {path: 'sell', component: SellComponent}
 ];
 
 @NgModule({

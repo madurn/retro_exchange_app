@@ -1,0 +1,53 @@
+<!--
+<app-game-product-detail [game]="selectedGame"></app-game-product-detail>
+<app-game-product-detail [gameConsole]="selectedConsole"></app-game-product-detail>
+-->
+<h2>Super Nintendo Consoles and Games</h2>
+
+<table>
+  <tr>
+    <td *ngFor="let snesConsole of snesConsoles">
+      <a routerLink="/snes-product-detail/{{snesConsole.id}}">
+        <img src={{snesConsole.imageLocation}} width="300" height="200"> <br>
+        Name: {{snesConsole.name}} <br>
+        Price: {{snesConsole.price | currency}} <br>
+        Condition: {{snesConsole.condition}} <br>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let snesGame of snesGames">
+      <a routerLink="/snes-product-detail/{{snesGame.id}}">
+        <img src={{snesGame.imageLocation}} width="300" height="200"> <br>
+        Name: {{snesGame.name}} <br>
+        Price: {{snesGame.price | currency}} <br>
+        Condition: {{snesGame.condition}} <br>
+      </a>
+    </td>
+  </tr>
+</table>
+
+<!--
+<table>
+  <tr>
+    <td *ngFor="let snesConsole of snesConsoles"
+    [class.selected]="snesConsole === selectedConsole"
+    (click)="onSelectConsole(snesConsole)">
+      <img src={{snesConsole.imageLocation}} width="300" height="200"> <br>
+      Name: {{snesConsole.name}} <br>
+      Price: {{snesConsole.price | currency}} <br>
+      Condition: {{snesConsole.condition}} <br>
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let snesGame of snesGames"
+    [class.selected]="snesGame === selectedGame"
+    (click)="onSelectGame(snesGame)">
+      <img src={{snesGame.imageLocation}} width="300" height="200"> <br>
+      Name: {{snesGame.name}} <br>
+      Price: {{snesGame.price | currency}} <br>
+      Condition: {{snesGame.condition}} <br>
+    </td>
+  </tr>
+</table>
+-->

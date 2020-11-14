@@ -1,0 +1,35 @@
+<div *ngIf="gameProduct">
+  <h2>{{gameProduct.name | uppercase}}</h2>
+  <img src={{gameProduct.imageLocation}} width="300" height="200"> <br>
+  <div><span>Price: </span>{{gameProduct.price | currency}}</div>
+  <div><span>Condition: </span>{{gameProduct.condition}}</div>
+  <div><span>id: </span>{{gameProduct.id}}</div>
+  <button (click)="addToCart(gameProduct)">add to cart</button>
+  <button (click)="goBack()">go back</button>
+</div>
+
+<!--
+<div *ngIf="game">
+  <h2>{{game.name | uppercase}}</h2>
+  <img src={{game.imageLocation}} width="300" height="200"> <br>
+  <div><span>Price: </span>{{game.price | currency}}</div>
+  <div><span>Console: </span>{{game.console}}</div>
+  <div><span>Release Year: </span>{{game.year}}</div>
+  <div><span>Condition: </span>{{game.condition}}</div>
+  <div><span>id: </span>{{game.id}}</div>
+  <button>add to cart</button> <!- non-functional->
+  <button (click)="goBack()">go back</button>
+</div>
+
+
+<div *ngIf="gameConsole">
+  <h2>{{gameConsole.name | uppercase}}</h2>
+  <img src={{gameConsole.imageLocation}} width="300" height="200"> <br>
+  <div><span>Price: </span>{{gameConsole.price | currency}}</div>
+  <div><span>Condition: </span>{{gameConsole.condition}}</div>
+  <div><span>id: </span>{{gameConsole.id}}</div>
+  <button>add to cart</button> <!- non-functional->
+  <button (click)="goBack()">go back</button>
+</div>
+-->
+

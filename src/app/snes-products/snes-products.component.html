@@ -1,0 +1,100 @@
+<h2>Super Nintendo Consoles and Games</h2>
+
+<table>
+  <tr>
+    <ng-container *ngFor="let gameProduct of gameProducts">
+      <ng-container *ngIf="gameProduct.name === 'Super Nintendo'">
+        <td>
+          <a routerLink="/game-product-detail/{{gameProduct.id}}">
+            <img src={{gameProduct.imageLocation}} width="300" height="200"> <br>
+            {{gameProduct.name}} <br>
+            {{gameProduct.price | currency}} <br>
+            {{gameProduct.condition}} <br>
+          </a>
+          <button (click)="addToCart(gameProduct)">add to cart</button> <!-- non-functional-->
+        </td>
+      </ng-container>
+    </ng-container>
+  </tr>
+
+  <tr>
+    <ng-container *ngFor="let gameProduct of gameProducts">
+      <ng-container *ngIf="gameProduct.console === 'Super Nintendo' && gameProduct.type === 'Game'">
+        <td>
+          <a routerLink="/game-product-detail/{{gameProduct.id}}">
+            <img src={{gameProduct.imageLocation}} width="300" height="200"> <br>
+            {{gameProduct.name}} <br>
+            {{gameProduct.price | currency}} <br>
+            {{gameProduct.condition}} <br>
+          </a>
+          <button>add to cart</button> <!-- non-functional-->
+        </td>
+      </ng-container>
+    </ng-container>
+  </tr>
+</table>
+
+
+<!--
+  <table>
+  <tr>
+    <ng-container *ngFor="let snesConsole of consoles">
+      <ng-container *ngIf="snesConsole.name === 'Super Nintendo'">
+        <td>
+          <a routerLink="/snes-product-detail/{{snesConsole.id}}">
+            <img src={{snesConsole.imageLocation}} width="300" height="200"> <br>
+            Name: {{snesConsole.name}} <br>
+            Price: {{snesConsole.price | currency}} <br>
+            Condition: {{snesConsole.condition}} <br>
+          </a>
+        </td>
+      </ng-container>
+    </ng-container>
+  </tr>
+
+  <tr>
+    <ng-container *ngFor="let snesGame of games">
+      <ng-container *ngIf="snesGame.console === 'Super Nintendo'">
+        <td>
+          <a routerLink="/snes-product-detail/{{snesGame.id}}">
+            <img src={{snesGame.imageLocation}} width="300" height="200"> <br>
+            Name: {{snesGame.name}} <br>
+            Price: {{snesGame.price | currency}} <br>
+            Condition: {{snesGame.condition}} <br>
+          </a>
+        </td>
+      </ng-container>
+    </ng-container>
+  </tr>
+</table>
+-->
+
+<!--
+<table>
+  <tr>
+    <td *ngFor="let snesConsole of consoles">
+      <div *ngIf="snesConsole.name === 'Super Nintendo'">
+        <a routerLink="/snes-product-detail/{{snesConsole.id}}">
+          <img src={{snesConsole.imageLocation}} width="300" height="200"> <br>
+          Name: {{snesConsole.name}} <br>
+          Price: {{snesConsole.price | currency}} <br>
+          Condition: {{snesConsole.condition}} <br>
+        </a>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let snesGame of games">
+      <div *ngIf="snesGame.console === 'Super Nintendo'">
+        <a routerLink="/snes-product-detail/{{snesGame.id}}">
+          <img src={{snesGame.imageLocation}} width="300" height="200"> <br>
+          Name: {{snesGame.name}} <br>
+          Price: {{snesGame.price | currency}} <br>
+          Condition: {{snesGame.condition}} <br>
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+-->
+

@@ -1,0 +1,22 @@
+<div *ngIf="genesisGame">
+  <h2>{{genesisGame.name | uppercase}}</h2>
+  <img src={{genesisGame.imageLocation}} width="300" height="200"> <br>
+  <div><span>Price: </span>{{genesisGame.price | currency}}</div>
+  <div><span>Console: </span>{{genesisGame.console}}</div>
+  <div><span>Release Year: </span>{{genesisGame.year}}</div>
+  <div><span>Condition: </span>{{genesisGame.condition}}</div>
+  <div><span>id: </span>{{genesisGame.id}}</div>
+  <button>add to cart</button> <!-- non-functional-->
+  <button (click)="goBack()">go back</button>
+</div>
+
+
+<div *ngIf="genesisConsole">
+  <h2>{{genesisConsole.name | uppercase}}</h2>
+  <img src={{genesisConsole.imageLocation}} width="300" height="200"> <br>
+  <div><span>Price: </span>{{genesisConsole.price | currency}}</div>
+  <div><span>Condition: </span>{{genesisConsole.condition}}</div>
+  <div><span>id: </span>{{genesisConsole.id}}</div>
+  <button>add to cart</button> <!-- non-functional-->
+  <button (click)="goBack()">go back</button>
+</div>

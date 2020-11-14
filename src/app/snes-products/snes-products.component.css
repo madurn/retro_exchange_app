@@ -2,35 +2,39 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  text-align: center;
+}
+
 table {
   border: 1px solid black;
+  border-collapse: collapse;
+  table-layout: fixed;
+  /*border-collapse: collapse;*/
   padding: 2px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
+  /*margin-top: 10px;*/
+  width: 60rem;
+}
+
+tr {
+  cursor: pointer;
+}
+
+th {
+  width: 10rem;
 }
 
 td {
   border: 1px solid black;
   padding: 2px;
-  white-space: pre;
+  /*white-space: pre;*/
   text-align: center;
 }
 
 a {
   text-decoration: none;
-}
-
-button {
-  margin-top: 20px;
-  margin-left: 5px;
-  margin-right: 5px;
-  font-family: Arial;
-  background-color: #eee;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
 }
 
 button:hover {
@@ -41,4 +45,13 @@ button:disabled {
   background-color: #eee;
   color: #ccc;
   cursor: auto;
+}
+
+tr:nth-child(even) {
+  background-color: lightgray;
+}
+
+/*place under tr:nth-child(even) selector*/
+tr:hover {
+  background-color: lightgreen;
 }

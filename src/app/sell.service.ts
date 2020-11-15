@@ -32,6 +32,14 @@ export class SellService {
     );
   }
 
+  deleteSellItem(sellItem: SellItem | number): Observable<SellItem> {
+    const id = typeof sellItem === 'number' ? sellItem : sellItem.id;
+    const url = `${this.sellItemsUrl}/${id}`;
+    return this.http.delete<SellItem>(url, this.httpOptions)
+      .pipe(
+        catchError(this.handleError<SellItem>('deleteSellItem'))
+    );
+  }
 
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {

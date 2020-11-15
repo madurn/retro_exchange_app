@@ -40,6 +40,7 @@
       <th>Console</th>
       <th>Item Type</th>
       <th>Condition</th>
+      <th>Remove</th>
     </tr>
   </thead>
   <tbody>
@@ -49,6 +50,7 @@
         <td>{{sellItem.console}}</td>
         <td>{{sellItem.type}}</td>
         <td>{{sellItem.condition}}</td>
+        <td><button (click)="delete(sellItem)">Remove</button></td>
       </tr>
     </ng-container>
   </tbody>

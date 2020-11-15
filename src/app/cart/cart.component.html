@@ -9,18 +9,44 @@
       <th>Condition</th>
       <th>Type</th>
       <th>Console</th>
+      <th>Remove</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let item of items">
-      <td><img src={{item.imageLocation}} width="50" height="50"></td>
-      <td>{{item.name}}</td>
-      <td>{{item.price}}</td>
-      <td>{{item.condition}}</td>
-      <td>{{item.type}}</td>
-      <td>{{item.console}}</td>
+    <tr *ngFor="let cartItem of cartItems" routerLink="/game-product-detail/{{cartItem.retexId}}">
+      <td><img src={{cartItem.imageLocation}} width="50" height="50"></td>
+      <td>{{cartItem.name}}</td>
+      <td>{{cartItem.price}}</td>
+      <td>{{cartItem.condition}}</td>
+      <td>{{cartItem.type}}</td>
+      <td>{{cartItem.console}}</td>
+      <td><button (click)="delete(cartItem)">Remove</button></td>
     </tr>
   </tbody>
 </table>
 
+<!--
+  <table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Condition</th>
+      <th>Type</th>
+      <th>Console</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cartItem of cartItems">
+      <td><img src={{cartItem.imageLocation}} width="50" height="50"></td>
+      <td>{{cartItem.name}}</td>
+      <td>{{cartItem.price}}</td>
+      <td>{{cartItem.condition}}</td>
+      <td>{{cartItem.type}}</td>
+      <td>{{cartItem.console}}</td>
+    </tr>
+  </tbody>
+</table>
+-->
 

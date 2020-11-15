@@ -1,5 +1,5 @@
 export interface CartItem {
-  id: number;
+  id?: number;
   retexId: number;
   name: string;
   price: number;

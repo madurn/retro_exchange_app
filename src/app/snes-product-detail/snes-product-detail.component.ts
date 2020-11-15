@@ -34,7 +34,7 @@ export class SnesProductDetailComponent implements OnInit {
   }
 
   addToCart(product) {
-    this.cartService.addToCart(product);
+    this.cartService.addCartItem(product);
     window.alert('Your product has been added to the cart!');
   }
 

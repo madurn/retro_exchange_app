@@ -42,6 +42,11 @@ export class SellComponent implements OnInit {
     window.alert('Your offer has been submitted for approval!');
   }
 
+  delete(sellItem: SellItem): void {
+    this.sellItems = this.sellItems.filter(h => h !== sellItem);
+    this.sellService.deleteSellItem(sellItem).subscribe();
+  }
+
   /*
   add(name: string, console: string, type: string, condition: string): void {
     name = name.trim();

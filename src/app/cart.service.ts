@@ -10,21 +10,45 @@ import { CartItem } from './cart-item'
   providedIn: 'root'
 })
 export class CartService {
-  items = [];
+  private gameProductsUrl = 'http://localhost:5000/api/GameProducts';
 
-  constructor() { }
+  private cartItemsUrl = 'http://localhost:5000/api/CartItems';
 
-  addToCart(product) {
-    this.items.push(product);
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
+
+  constructor(private http: HttpClient) { }
+
+  addCartItem(cartItem: CartItem): Observable<CartItem> {
+    return this.http.post<CartItem>(this.cartItemsUrl, cartItem, this.httpOptions)
+      .pipe(
+        catchError(this.handleError<CartItem>('addCartItem'))
+    );
   }
 
-  getItems() {
-    return this.items;
+  //TODO: add function to delete cart item from database
+
+  getCartItems(): Observable<CartItem[]> {
+    return this.http.get<CartItem[]>(this.cartItemsUrl)
+      .pipe(
+        catchError(this.handleError<CartItem[]>('getCartItems', []))
+    );
   }
 
-  clearCart() {
-    this.items = [];
-    return this.items;
+  deleteCartItem(cartItem: CartItem | number): Observable<CartItem> {
+    const id = typeof cartItem === 'number' ? cartItem : cartItem.id;
+    const url = `${this.cartItemsUrl}/${id}`;
+    return this.http.delete<CartItem>(url, this.httpOptions)
+      .pipe(
+        catchError(this.handleError<CartItem>('deleteCartItem'))
+    );
+  }
+
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      return of(result as T);
+    };
   }
 
 
@@ -63,6 +87,19 @@ export class CartService {
     return (error: any): Observable<T> => {
       return of(result as T);
     };
+  }
+
+  addToCart(product) {
+    this.items.push(product);
+  }
+
+  getItems() {
+    return this.items;
+  }
+
+  clearCart() {
+    this.items = [];
+    return this.items;
   }
   */
 }

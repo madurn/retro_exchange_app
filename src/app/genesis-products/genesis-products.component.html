@@ -1,5 +1,58 @@
 <h2>Sega Genesis Consoles and Games</h2>
 
+
+<h3>Genesis Consoles</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Box Art</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Condition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let gameProduct of gameProducts">
+      <ng-container *ngIf="gameProduct.name === 'Sega Genesis'">
+        <tr routerLink="/game-product-detail/{{gameProduct.id}}">
+              <td><div><img src={{gameProduct.imageLocation}} width="90" height="60"></div></td>
+              <td class="name">{{gameProduct.name}}</td>
+              <td class="price">{{gameProduct.price | currency}}</td>
+              <td class="condition">{{gameProduct.condition}}</td>
+        </tr>
+      </ng-container>
+    </ng-container>
+  </tbody>
+</table>
+
+<h3>Genesis Games</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Box Art</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Condition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let gameProduct of gameProducts">
+      <ng-container *ngIf="gameProduct.console === 'Sega Genesis' && gameProduct.type === 'Game'">
+        <tr routerLink="/game-product-detail/{{gameProduct.id}}">
+              <td><img src={{gameProduct.imageLocation}} width="90" height="60"></td>
+              <td>{{gameProduct.name}}</td>
+              <td>{{gameProduct.price | currency}}</td>
+              <td>{{gameProduct.condition}}</td>
+        </tr>
+      </ng-container>
+    </ng-container>
+  </tbody>
+</table>
+<!--
+  old layout
+
+<h2>Sega Genesis Consoles and Games</h2>
+
 <table>
   <tr>
     <ng-container *ngFor="let gameProduct of gameProducts">
@@ -31,4 +84,4 @@
     </ng-container>
   </tr>
 </table>
-
+-->

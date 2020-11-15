@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { NesProductsComponent } from './nes-products/nes-products.component';
+import { MasterSystemProductsComponent } from './master-system-products/master-system-products.component';
 import { SnesProductsComponent } from './snes-products/snes-products.component';
 import { SnesProductDetailComponent } from './snes-product-detail/snes-product-detail.component';
 import { GenesisProductsComponent } from './genesis-products/genesis-products.component';
@@ -11,6 +13,8 @@ import { SellComponent } from './sell/sell.component';
 
 
 const routes: Routes = [
+  {path: 'master-system-products', component: MasterSystemProductsComponent},
+  {path: 'nes-products', component: NesProductsComponent},
   {path: 'snes-products', component: SnesProductsComponent}, //SNES
   {path: 'snes-product-detail/:id', component: SnesProductDetailComponent}, //SNES
   {path: 'genesis-products', component: GenesisProductsComponent},

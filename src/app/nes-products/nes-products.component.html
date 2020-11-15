@@ -1,0 +1,50 @@
+<h2>Nintendo Entertainment System Consoles and Games</h2>
+
+
+<h3>NES Consoles</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Box Art</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Condition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let gameProduct of gameProducts">
+      <ng-container *ngIf="gameProduct.name === 'NES'">
+        <tr routerLink="/game-product-detail/{{gameProduct.id}}">
+              <td><div><img src={{gameProduct.imageLocation}} width="90" height="60"></div></td>
+              <td class="name">{{gameProduct.name}}</td>
+              <td class="price">{{gameProduct.price | currency}}</td>
+              <td class="condition">{{gameProduct.condition}}</td>
+        </tr>
+      </ng-container>
+    </ng-container>
+  </tbody>
+</table>
+
+<h3>NES Games</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Box Art</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Condition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let gameProduct of gameProducts">
+      <ng-container *ngIf="gameProduct.console === 'NES' && gameProduct.type === 'Game'">
+        <tr routerLink="/game-product-detail/{{gameProduct.id}}">
+              <td><img src={{gameProduct.imageLocation}} width="90" height="60"></td>
+              <td>{{gameProduct.name}}</td>
+              <td>{{gameProduct.price | currency}}</td>
+              <td>{{gameProduct.condition}}</td>
+        </tr>
+      </ng-container>
+    </ng-container>
+  </tbody>
+</table>

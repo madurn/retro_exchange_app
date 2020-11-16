@@ -1,36 +1,49 @@
 <h2>Sell Form</h2>
-<div class="sellItemForm">
-  <label> Name of Item
-    <input #sellItemName />
-  </label>
+<!-- <div class="sellItemForm"> -->
+<form>
+  <div class="form-item">
+    <label> Name of Game Product:
+      <input #sellItemName />
+    </label>
+  </div>
 
-  <label> Console: </label>
-  <select #sellItemConsole name="console">
-    <option>NES</option>
-    <option>Master System</option>
-    <option>SNES</option>
-    <option>Sega Genesis</option>
-  </select>
+  <div class="form-item">
+    <label> Console:
+      <select #sellItemConsole name="console">
+        <option>NES</option>
+        <option>Master System</option>
+        <option>SNES</option>
+        <option>Sega Genesis</option>
+      </select>
+    </label>
+  </div>
 
-  <label> Item Type: </label>
-  <select #sellItemType>
-    <option>Console</option>
-    <option>Game</option>
-  </select>
+  <div class="form-item">
+    <label> Item Type:
+      <select #sellItemType>
+        <option>Console</option>
+        <option>Game</option>
+      </select>
+    </label>
+  </div>
 
-  <label> Condition: </label>
-    <select #sellItemCondition>
-      <option>NEW-SEALED</option>
-      <option>USED-PARTS</option>
-      <option>USED-GOOD</option>
-      <option>USED-GREAT</option>
-      <option>USED-EXCELLENT</option>
-    </select>
+  <div class="form-item">
+    <label> Condition:
+      <select #sellItemCondition>
+        <option>NEW-SEALED</option>
+        <option>USED-PARTS</option>
+        <option>USED-GOOD</option>
+        <option>USED-GREAT</option>
+        <option>USED-EXCELLENT</option>
+      </select>
+    </label>
+  </div>
 
   <button (click)="add(sellItemName.value, sellItemConsole.value, sellItemType.value, sellItemCondition.value); sellItemName.value='';">
-    add
+    submit
   </button>
-</div>
+</form>
+<!-- </div> -->
 
 <h2>Submitted Items</h2>
 <table>

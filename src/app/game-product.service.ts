@@ -3,30 +3,69 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 
-import { Game } from './game-product';
-import { GameConsole } from './game-product'
 
 import { GameProduct } from './game-product'
 
-//import { GENESISGAMES } from './mock-game-products'
-//import { GENESISCONSOLES} from './mock-game-products'
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class GameProductService {
 
-  private gamesUrl = 'http://localhost:5000/api/Games';
-  private gameConsolesUrl = 'http://localhost:5000/api/GameConsoles';
   private gameProductsUrl = 'http://localhost:5000/api/GameProducts';
-  /*
-  private gamesUrl = 'https://localhost:54506/api/Games';
-  private gameConsolesUrl = 'https://localhost:54506/api/GameConsoles';
-  */
 
   constructor(private http: HttpClient) { }
 
-  //REMOVE
+   ////////////////////////////////////////////////////////////////////////////////////
+
+  //KEEP
+  getGameProducts(): Observable<GameProduct[]> {
+    return this.http.get<GameProduct[]>(this.gameProductsUrl)
+      .pipe(
+        catchError(this.handleError<GameProduct[]>('getGameProducts', []))
+    );
+  }
+
+  //KEEP
+  getGameProduct(id: number): Observable<GameProduct> {
+    const url = `${this.gameProductsUrl}/${id}`;
+    return this.http.get<GameProduct>(url)
+      .pipe(
+        catchError(this.handleError<GameProduct>(`getGameProduct id=${id}`))
+    );
+  }
+
+  /* GET game products whose name contains search term */
+searchGameProducts(term: string): Observable<GameProduct[]> {
+  if (!term.trim()) {
+    // if not search term, return empty hero array.
+    return of([]);
+  }
+  return this.http.get<GameProduct[]>(`${this.gameProductsUrl}/?name=${term}`)
+    .pipe(
+      catchError(this.handleError<GameProduct[]>('searchGameProduct', []))
+  );
+}
+
+////////////////////////////////////////////////////////////////////////////////////
+
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      return of(result as T);
+    };
+  }
+}
+
+/*
+
+import { Game } from './game-product';
+import { GameConsole } from './game-product'
+
+//import { GENESISGAMES } from './mock-game-products'
+//import { GENESISCONSOLES} from './mock-game-products'
+
+ //REMOVE
   getGames(): Observable<Game[]> {
     return this.http.get<Game[]>(this.gamesUrl)
       .pipe(
@@ -42,17 +81,7 @@ export class GameProductService {
     );
   }
 
-  //KEEP
-  getGameProducts(): Observable<GameProduct[]> {
-    return this.http.get<GameProduct[]>(this.gameProductsUrl)
-      .pipe(
-        catchError(this.handleError<GameProduct[]>('getGameProducts', []))
-    );
-  }
-
-  ////////////////////////////////////////////////////////////////////////////////////
-
-  //REMOVE
+ //REMOVE
   getGame(id: number): Observable<Game> {
     const url = `${this.gamesUrl}/${id}`;
     return this.http.get<Game>(url)
@@ -70,19 +99,6 @@ export class GameProductService {
     );
   }
 
-  //KEEP
-  getGameProduct(id: number): Observable<GameProduct> {
-    const url = `${this.gameProductsUrl}/${id}`;
-    return this.http.get<GameProduct>(url)
-      .pipe(
-        catchError(this.handleError<GameProduct>(`getGameProduct id=${id}`))
-    );
-  }
 
+*/
 
-  private handleError<T>(operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
-      return of(result as T);
-    };
-  }
-}

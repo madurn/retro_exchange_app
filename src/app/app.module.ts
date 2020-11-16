@@ -18,6 +18,7 @@ import { CartComponent } from './cart/cart.component';
 import { SellComponent } from './sell/sell.component';
 import { MasterSystemProductsComponent } from './master-system-products/master-system-products.component';
 import { NesProductsComponent } from './nes-products/nes-products.component';
+import { GameProductSearchComponent } from './game-product-search/game-product-search.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { NesProductsComponent } from './nes-products/nes-products.component';
     CartComponent,
     SellComponent,
     MasterSystemProductsComponent,
-    NesProductsComponent
+    NesProductsComponent,
+    GameProductSearchComponent
   ],
   imports: [
     BrowserModule,

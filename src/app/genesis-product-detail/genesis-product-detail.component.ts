@@ -22,11 +22,11 @@ export class GenesisProductDetailComponent implements OnInit {
     private location: Location
   ) { }
 
+
   ngOnInit(): void {
-    this.getGenesisGame();
-    this.getGenesisConsole();
   }
 
+  /*
   getGenesisGame(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.gameProductService.getGame(id)
@@ -42,5 +42,6 @@ export class GenesisProductDetailComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
+  */
 
 }

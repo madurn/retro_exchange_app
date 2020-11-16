@@ -1,4 +1,26 @@
 <div *ngIf="gameProduct">
+  <div class="product-box">
+    <div class="product-name">
+      <h2>{{gameProduct.name | uppercase}}</h2>
+    </div>
+    <div class="product-image">
+      <img src={{gameProduct.imageLocation}} >
+    </div>
+    <div class="product-details">
+      <div class="product-detail"><span>Price: </span>{{gameProduct.price | currency}}</div>
+      <div class="product-detail"><span>Condition: </span>{{gameProduct.condition}}</div>
+      <div class="product-detail"><span>Console: </span>{{gameProduct.console}}</div>
+      <div class="product-detail"><span>Year of Release: </span>{{gameProduct.year}}</div>
+      <div class="product-detail"><span>Product Number: </span>{{gameProduct.id}}</div>
+    </div>
+    <div class="add-to-cart-button">
+      <button (click)="addToCart()">ADD TO CART</button>
+    </div>
+  </div>
+</div>
+
+<!--
+<div *ngIf="gameProduct">
   <h2>{{gameProduct.name | uppercase}}</h2>
   <img src={{gameProduct.imageLocation}} width="300" height="200"> <br>
   <div><span>Price: </span>{{gameProduct.price | currency}}</div>
@@ -7,6 +29,7 @@
   <button (click)="addToCart()">add to cart</button>
   <button (click)="goBack()">go back</button>
 </div>
+-->
 
 <!--
   <button (click)="addToCart(gameProduct)">add to cart</button>

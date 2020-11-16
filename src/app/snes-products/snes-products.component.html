@@ -3,50 +3,50 @@
 
 <h3>Super Nintendo Consoles</h3>
 <table>
-  <thead>
+  <!--<thead> -->
     <tr>
-      <th>Box Art</th>
-      <th>Name</th>
-      <th>Price</th>
-      <th>Condition</th>
+      <th class="box-art-column">Console</th>
+      <!-- <th class="name-column">Name</th> -->
+      <th th class="price-column">Price</th>
+      <th th class="condition-column">Condition</th>
     </tr>
-  </thead>
-  <tbody>
+  <!--</thead> -->
+  <!--<tbody> -->
     <ng-container *ngFor="let gameProduct of gameProducts">
       <ng-container *ngIf="gameProduct.name === 'Super Nintendo'">
         <tr routerLink="/game-product-detail/{{gameProduct.id}}">
-              <td><div><img src={{gameProduct.imageLocation}} width="90" height="60"></div></td>
-              <td class="name">{{gameProduct.name}}</td>
+              <td><div class="product-image"><img src={{gameProduct.imageLocation}} width="150" height="77.9"></div></td>
+              <!-- <td class="name">{{gameProduct.name}}</td> -->
               <td class="price">{{gameProduct.price | currency}}</td>
               <td class="condition">{{gameProduct.condition}}</td>
         </tr>
       </ng-container>
     </ng-container>
-  </tbody>
+  <!--</tbody> -->
 </table>
 
 <h3>Super Nintendo Games</h3>
 <table>
-  <thead>
+  <!--<thead> -->
     <tr>
       <th>Box Art</th>
       <th>Name</th>
       <th>Price</th>
       <th>Condition</th>
     </tr>
-  </thead>
-  <tbody>
+  <!--</thead> -->
+  <!--<tbody> -->
     <ng-container *ngFor="let gameProduct of gameProducts">
       <ng-container *ngIf="gameProduct.console === 'Super Nintendo' && gameProduct.type === 'Game'">
         <tr routerLink="/game-product-detail/{{gameProduct.id}}">
-              <td><img src={{gameProduct.imageLocation}} width="90" height="60"></td>
+              <td><img src={{gameProduct.imageLocation}} width="120" height="87"></td>
               <td>{{gameProduct.name}}</td>
               <td>{{gameProduct.price | currency}}</td>
               <td>{{gameProduct.condition}}</td>
         </tr>
       </ng-container>
     </ng-container>
-  </tbody>
+  <!--</tbody> -->
 </table>
 
 <!--

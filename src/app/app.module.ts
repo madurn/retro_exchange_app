@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { GameProductsComponent } from './game-products/game-products.component';
 import { GameProductDetailComponent } from './game-product-detail/game-product-detail.component';
 import { GenesisProductsComponent } from './genesis-products/genesis-products.component';
 import { SnesProductsComponent } from './snes-products/snes-products.component';
@@ -19,7 +18,6 @@ import { AccountComponent } from './account/account.component';
 @NgModule({
   declarations: [
     AppComponent,
-    GameProductsComponent,
     GameProductDetailComponent,
     GenesisProductsComponent,
     SnesProductsComponent,

@@ -28,6 +28,13 @@ export class CartComponent implements OnInit {
     this.cartService.deleteCartItem(cartItem).subscribe();
   }
 
+  getSubtotal(): number {
+    let subtotal = 0;
+    for (let cartItem of this.cartItems) {
+      subtotal += cartItem.price;
+    }
+    return subtotal;
+  }
   /*
   ngOnInit(): void {
     this.getItems()

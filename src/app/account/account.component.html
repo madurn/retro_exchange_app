@@ -1,0 +1,89 @@
+
+<div class="account-details" *ngIf="account">
+  <h2>Account Details</h2>
+  <!--<ul *ngFor="let account of accounts">-->
+  <ul>
+    <li>
+      <label> First Name:
+        <input [(ngModel)]="account.firstName" placeholder="Enter First Name"/>
+      </label>
+    </li>
+    <!--<li>First Name:{{account.firstName}}</li>-->
+    <li>
+      <label> Last Name:
+        <input [(ngModel)]="account.lastName" placeholder="Enter Last Name"/>
+      </label>
+    </li>
+    <li>
+      <label> Date of Birth:
+        <input [(ngModel)]="account.dateOfBirth" placeholder="Enter DOB"/>
+      </label>
+    </li>
+    <li>
+      <label> Address:
+        <input [(ngModel)]="account.address" placeholder="Enter Address"/>
+      </label>
+    </li>
+    <li>
+      <label> City:
+        <input [(ngModel)]="account.city" placeholder="Enter City"/>
+      </label>
+    </li>
+    <li>
+      <label> State:
+        <input [(ngModel)]="account.state" placeholder="Enter State"/>
+      </label>
+    </li>
+    <li>
+      <label> Zip Code:
+        <input [(ngModel)]="account.zipCode" placeholder="Enter Zip Code"/>
+      </label>
+    </li>
+    <li>
+      <label> Phone:
+        <input [(ngModel)]="account.phone" placeholder="Enter Phone Number"/>
+      </label>
+    </li>
+    <li>
+      <label> Email:
+        <input [(ngModel)]="account.email" placeholder="Enter Email Address"/>
+      </label>
+    </li>
+    <li>
+      <label> Password:
+        <input [(ngModel)]="account.password" placeholder="Update Password"/>
+      </label>
+    </li>
+  </ul>
+  <div class="submit-button">
+    <button (click)="save()">SAVE CHANGES</button>
+  </div>
+</div>
+
+<!--
+  <div class="account-details">
+  <h2>Account Details</h2>
+  <ul *ngFor="let account of accounts">
+    <li>
+      <label> First Name:
+        <input [(ngModel)]="account.firstName" placeholder="Name"/>
+      </label>
+    </li>
+    <li>First Name:{{account.firstName}}</li>
+    <li>
+      <label> Last Name:
+        <input [(ngModel)]="account.lastName" placeholder="Name"/>
+      </label>
+    </li>
+    <li>Last Name:{{account.lastName}}</li>
+    <li>Date of Birth:{{account.dateOfBirth}}</li>
+    <li>Address:{{account.address}}</li>
+    <li>City:{{account.city}}</li>
+    <li>State:{{account.state}}</li>
+    <li>Zip:{{account.zipCode}}</li>
+    <li>Phone:{{account.phone}}</li>
+    <li>Email:{{account.email}}</li>
+    <li>Password:{{account.password}}</li>
+  </ul>
+</div>
+-->

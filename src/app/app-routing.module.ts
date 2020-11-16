@@ -10,6 +10,7 @@ import { GameProductDetailComponent } from './game-product-detail/game-product-d
 import { CartComponent } from './cart/cart.component';
 import { SellComponent } from './sell/sell.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { AccountComponent } from './account/account.component';
 
 
 
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path: 'game-product-detail/:id', component: GameProductDetailComponent},
   {path: 'cart', component: CartComponent},
   {path: 'sell', component: SellComponent},
-  {path: 'home-page', component: HomePageComponent}
+  {path: 'home-page', component: HomePageComponent},
+  {path: 'account', component: AccountComponent}
 ];
 
 @NgModule({

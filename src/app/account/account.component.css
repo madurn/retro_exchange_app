@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+h2 {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  text-align: left;
+}
+
+li {
+  margin: 1rem;
+}
+
+.account-details {
+  background: white;
+  margin: auto;
+  width: 40rem;
+  height: 33rem;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+
+.submit-button {
+  text-align: center;
+  clear: both;
+}
+
+button {
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-family: Arial;
+  color: white;
+  background-color: #e65151;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 15rem;
+  height: 3rem;
+  font-weight: 800;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}

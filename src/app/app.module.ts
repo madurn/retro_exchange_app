@@ -20,6 +20,7 @@ import { MasterSystemProductsComponent } from './master-system-products/master-s
 import { NesProductsComponent } from './nes-products/nes-products.component';
 import { GameProductSearchComponent } from './game-product-search/game-product-search.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { HomePageComponent } from './home-page/home-page.component';
     MasterSystemProductsComponent,
     NesProductsComponent,
     GameProductSearchComponent,
-    HomePageComponent
+    HomePageComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,

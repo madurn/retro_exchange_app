@@ -7,7 +7,7 @@ h3 {
 }
 
 table {
-  border: 1px solid black;
+  border: 1px solid lightgrey;
   border-collapse: collapse;
   table-layout: fixed;
   /*border-collapse: collapse;*/
@@ -16,6 +16,14 @@ table {
   margin-right: auto;
   /*margin-top: 10px;*/
   width: 60rem;
+}
+
+.head-row{
+  border-bottom: 1px solid lightgrey;
+}
+
+.total {
+  column-span: all;
 }
 
 tr {
@@ -27,10 +35,14 @@ th {
 }
 
 td {
-  border: 1px solid black;
   padding: 2px;
   /*white-space: pre;*/
   text-align: center;
+}
+
+.subtotal {
+  margin: auto;
+  text-align: center
 }
 
 a {
@@ -52,6 +64,7 @@ tr:nth-child(even) {
 }
 
 /*place under tr:nth-child(even) selector*/
-tr:hover {
-  background-color: lightgreen;
+tr:nth-child(n+2):hover {
+  background-color: lightskyblue;
+  box-shadow: 5px 10px 18px #888888;
 }

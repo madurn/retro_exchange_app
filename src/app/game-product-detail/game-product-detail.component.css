@@ -18,7 +18,7 @@ button {
   font-weight: 800;
 }
 button:hover {
-  background-color: #cfd8dc;
+  background-color: #ee0c0c;
 }
 button:disabled {
   background-color: #eee;
@@ -57,7 +57,7 @@ button:disabled {
 
 .product-detail {
   font-weight: bold;
-  margin: 1rem;
+  margin: 3rem;
 }
 
 .add-to-cart-button {

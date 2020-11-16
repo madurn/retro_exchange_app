@@ -57,7 +57,6 @@ export class GameProductDetailComponent implements OnInit {
     this.add(cartItem);
   }
 
-  /* WORKS */
  add(cartItem: CartItem): void {
   this.cartService.addCartItem(cartItem)
     .subscribe(cartItem => {
@@ -71,52 +70,3 @@ export class GameProductDetailComponent implements OnInit {
   }
 
 }
-
-/*
-  cartItemTest: CartItem = {
-    retexId: 123,
-    name: "Test",
-    price: 9.99,
-    condition: "Good",
-    type: "Game",
-    console: "Super Nintendo",
-    year: 1992,
-    imageLocation: "none"
-  }
-
- createCartItem() {
-    this.cartItem.id = this.gameProduct.id
-    this.cartItem.retexId = this.gameProduct.id;
-    this.cartItem.name = this.gameProduct.name;
-    this.cartItem.price = this.gameProduct.price;
-    this.cartItem.condition = this.gameProduct.condition;
-    this.cartItem.type = this.gameProduct.type;
-    this.cartItem.console = this.gameProduct.console;
-    this.cartItem.year = this.gameProduct.year;
-    this.cartItem.imageLocation = this.gameProduct.imageLocation;
-  }
-  */
-
-  /*
-  addToCart(product) {
-    this.cartService.addCartItem({ name } as CartItem);
-    window.alert('Your product has been added to the cart!');
-  }
-
-   addToCart(): void {
-    let cartItem: CartItem;
-    cartItem = this.createCartItem();
-    this.add(this.cartItemTest);
-    this.add(cartItem);
-    window.alert('addToCart() works!');
-  }
-
-  WORKS
- add(cartItem: CartItem): void {
-  this.cartService.addCartItem(cartItem)
-    .subscribe(cartItem => {
-      this.cartItems.push(cartItem);
-    });
-    window.alert('Your product has been added to the cart!');
-  }
-*/

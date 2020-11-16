@@ -35,19 +35,5 @@ export class CartComponent implements OnInit {
     }
     return subtotal;
   }
-  /*
-  ngOnInit(): void {
-    this.getItems()
-  }
-
-  getItems(): void {
-    this.items = this.cartService.getItems()
-  }
-
-  ngOnInit() {
-    this.items = this.cartService.getItems();
-  }
-
-  */
 
 }

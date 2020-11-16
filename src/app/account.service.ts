@@ -8,6 +8,7 @@ import { Account } from './account';
 @Injectable({
   providedIn: 'root'
 })
+
 export class AccountService {
   private accountsUrl = 'http://localhost:5000/api/Accounts';
 
@@ -47,20 +48,10 @@ export class AccountService {
     );
   }
 
-  /*
-  updateAccount(account: Account): Observable<any> {
-    return this.http.put(this.accountsUrl, account, this.httpOptions)
-    .pipe(
-      catchError(this.handleError<any>('updateAccount'))
-    );
-  }
-  */
-
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
-     // window.alert(error);
-
       return of(result as T);
     };
   }
+
 }

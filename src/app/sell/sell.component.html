@@ -1,12 +1,10 @@
 <h2>Sell Form</h2>
-<!-- <div class="sellItemForm"> -->
 <form>
   <div class="form-item">
     <label> Name of Game Product:
       <input #sellItemName />
     </label>
   </div>
-
   <div class="form-item">
     <label> Console:
       <select #sellItemConsole name="console">
@@ -17,7 +15,6 @@
       </select>
     </label>
   </div>
-
   <div class="form-item">
     <label> Item Type:
       <select #sellItemType>
@@ -26,7 +23,6 @@
       </select>
     </label>
   </div>
-
   <div class="form-item">
     <label> Condition:
       <select #sellItemCondition>
@@ -38,13 +34,10 @@
       </select>
     </label>
   </div>
-
   <button (click)="add(sellItemName.value, sellItemConsole.value, sellItemType.value, sellItemCondition.value); sellItemName.value='';">
     submit
   </button>
 </form>
-<!-- </div> -->
-
 <h2>Submitted Items</h2>
 <table>
   <thead>
@@ -68,61 +61,4 @@
     </ng-container>
   </tbody>
 </table>
-<!--
-  <h2>Sell Form</h2>
-<div class="sellItemForm">
-    <label> Name of Item
-      <input #sellItemName />
-    </label>
-    <label for="console">Console:</label>
-      <select name="console" id="console">
-        <option #sellItemConsole value="nes">NES</option>
-        <option #sellItemConsole value="masterSystem">Master System</option>
-        <option #sellItemConsole value="snes">SNES</option>
-        <option #sellItemConsole value="segaGenesis">Sega Genesis</option>
-      </select>
 
-    <label> Item Type
-      <select>
-        <option #sellItemType>Console</option>
-        <option #sellItemType>Game</option>
-      </select>
-    </label>
-    <label> Condition
-      <select>
-        <option #sellItemCondition>NEW-SEALED</option>
-        <option #sellItemCondition>USED-PARTS</option>
-        <option #sellItemCondition>USED-GOOD</option>
-        <option #sellItemCondition>USED-GREAT</option>
-        <option #sellItemCondition>USED-EXCELLENT</option>
-      </select>
-    </label>
-  <button (click)="add(sellItemName.value, sellItemConsole.value, sellItemType.value, sellItemCondition.value); sellItemName.value='';">
-    add
-  </button>
-</div>
-
-  <label for="console"> Console: </label>
-  <select #sellItemConsole name="console">
-    <option>NES</option>
-    <option>Master System</option>
-    <option>SNES</option>
-    <option>Sega Genesis</option>
-  </select>
-
-  <label for="itemType"> Item Type: </label>
-  <select #sellItemType name="itemType">
-    <option>Console</option>
-    <option>Game</option>
-  </select>
-
-  <label for="condition"> Condition </label>
-    <select #sellItemCondition name="condition">
-      <option>NEW-SEALED</option>
-      <option>USED-PARTS</option>
-      <option>USED-GOOD</option>
-      <option>USED-GREAT</option>
-      <option>USED-EXCELLENT</option>
-    </select>
-
--->

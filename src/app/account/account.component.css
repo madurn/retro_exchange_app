@@ -47,7 +47,7 @@ button {
   font-weight: 800;
 }
 button:hover {
-  background-color: #cfd8dc;
+  background-color: #ee0c0c;
 }
 button:disabled {
   background-color: #eee;

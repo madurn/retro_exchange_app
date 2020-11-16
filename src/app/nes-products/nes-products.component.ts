@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { GameProductService } from '../game-product.service'
 
 import { GameProduct } from '../game-product'
@@ -8,6 +9,7 @@ import { GameProduct } from '../game-product'
   templateUrl: './nes-products.component.html',
   styleUrls: ['./nes-products.component.css']
 })
+
 export class NesProductsComponent implements OnInit {
   gameProducts: GameProduct[];
 
@@ -21,4 +23,5 @@ export class NesProductsComponent implements OnInit {
     this.gameProductService.getGameProducts()
     .subscribe(gameProducts => this.gameProducts = gameProducts);
   }
+
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GameProductService } from '../game-product.service'
-import { CartService } from '../cart.service'
 
+import { CartService } from '../cart.service'
 import { GameProduct } from '../game-product'
 
 @Component({
@@ -9,6 +9,7 @@ import { GameProduct } from '../game-product'
   templateUrl: './snes-products.component.html',
   styleUrls: ['./snes-products.component.css']
 })
+
 export class SnesProductsComponent implements OnInit {
 
   gameProducts: GameProduct[];

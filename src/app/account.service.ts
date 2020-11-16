@@ -32,6 +32,13 @@ export class AccountService {
     );
   }
 
+  addAccount(account: Account): Observable<Account> {
+    return this.http.post<Account>(this.accountsUrl, account, this.httpOptions)
+    .pipe(
+      catchError(this.handleError<Account>('addAccount'))
+    );
+  }
+
   updateAccount(account: Account): Observable<any> {
     return this.http.put(this.accountsUrl, account, this.httpOptions)
     .pipe(
@@ -41,6 +48,8 @@ export class AccountService {
 
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
+     // window.alert(error);
+
       return of(result as T);
     };
   }

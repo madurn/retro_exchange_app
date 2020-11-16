@@ -9,22 +9,22 @@ import { Account } from '../account';
   styleUrls: ['./account.component.css']
 })
 export class AccountComponent implements OnInit {
-  //accounts: Account[];
+  accounts: Account[];
   account: Account;
 
   constructor(private accountService: AccountService) { }
 
   ngOnInit(): void {
-    //this.getAccounts();
+    this.getAccounts();
     this.getAccount()
   }
 
-  /*
+
   getAccounts(): void {
     this.accountService.getAccounts()
       .subscribe(accounts => this.accounts = accounts);
   }
-  */
+
 
   getAccount(): void {
     const id = 1
@@ -32,13 +32,55 @@ export class AccountComponent implements OnInit {
     .subscribe(account => this.account = account);
   }
 
-
-  save(): void {
-    this.accountService.updateAccount(this.account)
-      .subscribe();
-      window.alert('Your account has been updated!');
+  createAccountUpdate() {
+    let account: Account = {
+      id: this.account.id,
+      firstName: this.account.firstName,
+      lastName: this.account.lastName,
+      dateOfBirth: this.account.dateOfBirth,
+      address: this.account.address,
+      city: this.account.city,
+      state: this.account.state,
+      zipCode: this.account.zipCode,
+      phone: this.account.phone,
+      email: this.account.email,
+      password: this.account.password,
+      cardName: this.account.cardName,
+      cardNumber: this.account.cardNumber,
+      expirationDate: this.account.expirationDate,
+      cVV: this.account.cVV,
+      cardAddress: this.account.cardAddress,
+      cardCity: this.account.cardCity,
+      cardState: this.account.cardState,
+      cardZipCode: this.account.cardZipCode,
+      cardPhone: this.account.cardPhone
+    }
+    return account;
   }
 
+  saveAccount(): void {
+    let account: Account;
+    account = this.createAccountUpdate();
+    //this.accountService.updateAccount(account)
+      //.subscribe();
+    this.save(account);
+    window.alert(this.account.id);
+    window.alert('Your account has been updated!');
+  }
 
-
+  save(account: Account): void {
+    this.accountService.updateAccount(account).subscribe(account => {this.accounts.push(account)});
+    /*
+    .subscribe(account => {
+      this.accounts.push(account);
+    });
+    //window.alert('Your account has been updated!');
+    //this.accountService.addAccount(account)
+      //.subscribe(account => {
+        //this.accounts.push(account);
+      //});;
+    window.alert('Third window!');
+  }
+  */
+  }
 }

@@ -31,7 +31,7 @@
     <ng-container *ngFor="let gameProduct of gameProducts">
       <ng-container *ngIf="gameProduct.console === 'Super Nintendo' && gameProduct.type === 'Game'">
         <tr routerLink="/game-product-detail/{{gameProduct.id}}">
-              <td><img src={{gameProduct.imageLocation}} width="120" height="87"></td>
+              <td><img src={{gameProduct.imageLocation}} width="180" height="130.5"></td>
               <td>{{gameProduct.name}}</td>
               <td>{{gameProduct.price | currency}}</td>
               <td>{{gameProduct.condition}}</td>

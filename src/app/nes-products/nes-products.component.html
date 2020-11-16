@@ -1,3 +1,46 @@
+<div class="logo">
+  <img class="console-logo" src="assets/img/nes_logo.png">
+</div>
+
+<h3>Nintendo Entertainment System Consoles</h3>
+<table>
+    <tr class="head-row">
+      <th class="box-art-column">Console</th>
+      <th th class="price-column">Price</th>
+      <th th class="condition-column">Condition</th>
+    </tr>
+    <ng-container *ngFor="let gameProduct of gameProducts">
+      <ng-container *ngIf="gameProduct.name === 'NES'">
+        <tr routerLink="/game-product-detail/{{gameProduct.id}}">
+              <td><div class="product-image"><img src={{gameProduct.imageLocation}} width="176.7" height="92.7"></div></td>
+              <td class="price">{{gameProduct.price | currency}}</td>
+              <td class="condition">{{gameProduct.condition}}</td>
+        </tr>
+      </ng-container>
+    </ng-container>
+</table>
+
+<h3>Nintendo Entertainment System Games</h3>
+<table>
+    <tr class="head-row">
+      <th>Box Art</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Condition</th>
+    </tr>
+    <ng-container *ngFor="let gameProduct of gameProducts">
+      <ng-container *ngIf="gameProduct.console === 'NES' && gameProduct.type === 'Game'">
+        <tr routerLink="/game-product-detail/{{gameProduct.id}}">
+              <td><img src={{gameProduct.imageLocation}} width="160" height="230"></td>
+              <td>{{gameProduct.name}}</td>
+              <td>{{gameProduct.price | currency}}</td>
+              <td>{{gameProduct.condition}}</td>
+        </tr>
+      </ng-container>
+    </ng-container>
+</table>
+
+<!--
 <h2>Nintendo Entertainment System Consoles and Games</h2>
 
 
@@ -48,3 +91,4 @@
     </ng-container>
   </tbody>
 </table>
+-->

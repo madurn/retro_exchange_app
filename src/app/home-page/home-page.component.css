@@ -1,0 +1,88 @@
+*{
+  box-sizing: border-box;
+}
+
+.home-page-area {
+  border: 1px solid black;
+  background: white;
+  border-radius: 5px;
+  margin: auto;
+  width: 76rem;
+  height: 70rem;
+}
+
+.logo {
+  object-fit: contain;
+  height: 10rem;
+  width: 40rem;
+  margin: auto;
+}
+
+.shop-by {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.nes {
+  object-fit: contain;
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  height: 10rem;
+  width: 23rem;
+}
+
+.master-system {
+  object-fit: contain;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  height: 10rem;
+  width: 30rem;
+  margin: auto;
+}
+.snes {
+  object-fit: contain;
+  height: 10rem;
+  width: 40rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.genesis {
+  object-fit: contain;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  height: 10rem;
+  width: 40rem;
+  margin: auto;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.nes:hover {
+  box-shadow: 5px 10px 18px #888888;
+}
+
+.master-system:hover {
+  box-shadow: 5px 10px 18px #888888;
+}
+
+.snes:hover {
+  box-shadow: 5px 10px 18px #888888;
+}
+
+.genesis:hover {
+  box-shadow: 5px 10px 18px #888888;
+}

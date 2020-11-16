@@ -9,6 +9,7 @@ import { GenesisProductDetailComponent } from './genesis-product-detail/genesis-
 import { GameProductDetailComponent } from './game-product-detail/game-product-detail.component';
 import { CartComponent } from './cart/cart.component';
 import { SellComponent } from './sell/sell.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 
 
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path: 'genesis-product-detail/:id', component: GenesisProductDetailComponent},
   {path: 'game-product-detail/:id', component: GameProductDetailComponent},
   {path: 'cart', component: CartComponent},
-  {path: 'sell', component: SellComponent}
+  {path: 'sell', component: SellComponent},
+  {path: 'home-page', component: HomePageComponent}
 ];
 
 @NgModule({

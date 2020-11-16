@@ -1,8 +1,6 @@
-/*
-:host {
-  background: #f2f4f7;
+* {
+  box-sizing: border-box;
 }
-*/
 
 h2 {
   text-align: center;
@@ -12,14 +10,30 @@ h3 {
   text-align: center;
 }
 
+.head-row{
+  border-bottom: 1px solid lightgrey;
+}
+
+.logo {
+  object-fit: contain;
+  height: 5rem;
+  width: 20rem;
+  margin: auto;
+}
+
+.console-logo {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 table {
-  border: 1px solid black;
+  border: 1px solid lightgray;
   border-collapse: collapse;
   table-layout: fixed;
   padding: 2px;
   margin-left: auto;
   margin-right: auto;
-  /*width: 60rem*/
+  width: 50rem;
   overflow-y: scroll;
   background: white;
 }
@@ -28,39 +42,13 @@ tr {
   cursor: pointer;
 }
 
-/*
-th {
-  width: 10rem;
+td {
+  padding: 0.5rem;
+  text-align: center;
 }
-*/
-
-
-
-/******************************************************************************/
-/*Table-layout is fixed based on the first row. Table heading is the first row*/
-/*
-.box-art-column {
-  width: 45%;
-}
-
-.price-column {
-  width: 20%;
-}
-
-.condition-column {
-  width: 35%;
-}
-*/
-/******************************************************************************/
 
 .product-image {
   margin: 5px;
-}
-
-td {
-  /*border: 1px solid black;*/
-  padding: 0.5rem;
-  text-align: center;
 }
 
 a {
@@ -87,14 +75,25 @@ tr:nth-child(odd) {
 }
 */
 
-/*place under tr:nth-child(even) selector*/
 tr:nth-child(n+2):hover {
   background-color: lightskyblue;
+  box-shadow: 5px 10px 18px #888888;
 }
 
+/******************************************************************************/
+/*Table-layout is fixed based on the first row. Table heading is the first row*/
 /*
-tr:hover {
-  background-color: lightskyblue;
+.box-art-column {
+  width: 45%;
+}
+
+.price-column {
+  width: 20%;
+}
+
+.condition-column {
+  width: 35%;
 }
 */
+/******************************************************************************/
 

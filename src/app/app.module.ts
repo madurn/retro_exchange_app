@@ -19,6 +19,7 @@ import { SellComponent } from './sell/sell.component';
 import { MasterSystemProductsComponent } from './master-system-products/master-system-products.component';
 import { NesProductsComponent } from './nes-products/nes-products.component';
 import { GameProductSearchComponent } from './game-product-search/game-product-search.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { GameProductSearchComponent } from './game-product-search/game-product-s
     SellComponent,
     MasterSystemProductsComponent,
     NesProductsComponent,
-    GameProductSearchComponent
+    GameProductSearchComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,

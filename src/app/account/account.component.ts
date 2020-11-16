@@ -32,6 +32,35 @@ export class AccountComponent implements OnInit {
     .subscribe(account => this.account = account);
   }
 
+
+  saveAccount(): void {
+    this.accountService.updateAccount(this.account).subscribe(account => {this.accounts.push(account)});
+    window.alert('Your account has been updated!');
+    //this.save(this.account);
+    //window.alert(this.account.firstName);
+    //window.alert('Your account has been updated!');
+  }
+
+  /*
+  save(account: Account): void {
+    this.accountService.updateAccount(account).subscribe(account => {this.accounts.push(account)});
+  }
+  */
+    /*
+
+    .subscribe(account => {
+      this.accounts.push(account);
+    });
+    //window.alert('Your account has been updated!');
+    //this.accountService.addAccount(account)
+      //.subscribe(account => {
+        //this.accounts.push(account);
+      //});;
+    window.alert('Third window!');
+  }
+  */
+
+  /*
   createAccountUpdate() {
     let account: Account = {
       id: this.account.id,
@@ -58,29 +87,12 @@ export class AccountComponent implements OnInit {
     return account;
   }
 
-  saveAccount(): void {
+  /*
     let account: Account;
     account = this.createAccountUpdate();
     //this.accountService.updateAccount(account)
       //.subscribe();
-    this.save(account);
-    window.alert(this.account.id);
-    window.alert('Your account has been updated!');
-  }
+    */
 
-  save(account: Account): void {
-    this.accountService.updateAccount(account).subscribe(account => {this.accounts.push(account)});
-    /*
-    .subscribe(account => {
-      this.accounts.push(account);
-    });
-    //window.alert('Your account has been updated!');
-    //this.accountService.addAccount(account)
-      //.subscribe(account => {
-        //this.accounts.push(account);
-      //});;
-    window.alert('Third window!');
-  }
-  */
-  }
+
 }

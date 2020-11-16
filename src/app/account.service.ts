@@ -40,11 +40,21 @@ export class AccountService {
   }
 
   updateAccount(account: Account): Observable<any> {
+    const url = `${this.accountsUrl}/${account.id}`;
+    return this.http.put(url, account, this.httpOptions)
+    .pipe(
+      catchError(this.handleError<any>('updateAccount'))
+    );
+  }
+
+  /*
+  updateAccount(account: Account): Observable<any> {
     return this.http.put(this.accountsUrl, account, this.httpOptions)
     .pipe(
       catchError(this.handleError<any>('updateAccount'))
     );
   }
+  */
 
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
